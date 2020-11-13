@@ -5,6 +5,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Session;
 use Carbon\Carbon;
+use App\Http\Requests\RegisterRequest;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -60,7 +62,6 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        
         $user = User::findOrFail($id);
         
         return view('client.pages.profile',compact('user'));
@@ -76,18 +77,17 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-       
         $user = User::findOrFail($id);
         if (isset($user)) {
             if($request->image)
                {
-               
                 $file = $request->image;
                 $file->move('images', $file->getClientOriginalName());
                    $user->username = $request->username;
                    $user->name = $request->name;
                    $user->email = $request->email;
                    $user->password = $request->password;
+                   $user->phone = $request->phone;
                    $user->role = 0;
                    $user->status = 0;
                    $user->image = $request->image->getClientOriginalName();
@@ -106,12 +106,13 @@ class UserController extends Controller
                 $user->role = 0;
                 $user->status = 0;
                 $user->address = $request->address;
+                $user->phone = $request->phone;
                 $user->created_at = Carbon::now()->toDateTimeString();
                 $user->updated_at = Carbon::now()->toDateTimeString();
 
                 $user->update();
             }
-            return back();
+            return back()->with('msg','Update successfull');;
                  
            }
            
@@ -128,7 +129,7 @@ class UserController extends Controller
         //
     }
 
-    public function registerClient(Request $request){
+    public function registerClient(RegisterRequest   $request){
     
         if($request->image){
             $file = $request->image;

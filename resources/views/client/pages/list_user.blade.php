@@ -34,7 +34,6 @@
 									<i class="fas fa-edit btn btn-primary"></i>
 								</a>
 								
-							
 							</td>
 						</tr>
 					@endforeach()
