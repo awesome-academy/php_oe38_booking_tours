@@ -31,7 +31,7 @@ $factory->define(\App\Models\User::class, function (Faker\Generator $faker) {
 $factory->define(\App\Models\Category::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
-        'parent_id' => $faker->numberBetween(8,10),
+        'parent_id' => $faker->numberBetween(8,18),
     ];
 });
 
@@ -59,8 +59,8 @@ $factory->define(\App\Models\Tour::class, function (Faker\Generator $faker) {
 //Rating
 $factory->define(\App\Models\Rating::class, function (Faker\Generator $faker) {
     return [
-        'user_id' => $faker->numberBetween(1,10),
-        'tour_id' => $faker->numberBetween(1,10),
+        'user_id' => $faker->numberBetween(1,9),
+        'tour_id' => $faker->numberBetween(1,9),
         'rating' => $faker->numberBetween(0,5),
     ];
 });

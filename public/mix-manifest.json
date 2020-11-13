@@ -1,4 +1,15 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/js/app.js": "/js/app.js?id=5d7c8c4686b082a72732",
+    "/css/app.css": "/css/app.css?id=b7f4a9bce9feff45a1b2",
+    "/css/admin.css": "/css/admin.css?id=091412dd8b6555503b7a",
+    "/js/admin.js": "/js/admin.js?id=2cbb37fa5601a02a94e3",
+    "/css/client.css": "/css/client.css?id=7d0f673b12aa38b559f5",
+    "/js/client.js": "/js/client.js?id=f9379b94eadf64ef6ceb",
+    "/fonts/font-awe.css": "/fonts/font-awe.css?id=b227b1617a1763c8bc05",
+    "/fonts/fontawesome-webfont.eot": "/fonts/fontawesome-webfont.eot?id=016fa45033a942ffecad",
+    "/fonts/fontawesome-webfont.svg": "/fonts/fontawesome-webfont.svg?id=912ec66d7572ff821749",
+    "/fonts/fontawesome-webfont.ttf": "/fonts/fontawesome-webfont.ttf?id=ecebce3ab95b6640919b",
+    "/fonts/fontawesome-webfont.woff": "/fonts/fontawesome-webfont.woff?id=5e0388aeae16469773b8",
+    "/fonts/fontawesome-webfont.woff2": "/fonts/fontawesome-webfont.woff2?id=d829b32251e423806ca9",
+    "/fonts/FontAwesome.otf": "/fonts/FontAwesome.otf?id=663236d7aa447620b641"
 }
